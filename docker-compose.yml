@@ -13,7 +13,7 @@ services:
       context: .
       dockerfile: Dockerfile.nvim
     volumes:
-      - ./workspace:/home/dev/workspace
+      - ./workspace:/root/workspace
       - ./config:/root/.config/nvim
       - ./.bashrc:/root/.bashrc
 

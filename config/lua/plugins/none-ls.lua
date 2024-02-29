@@ -12,7 +12,6 @@ return {
                 comp.luasnip,   -- lua
                 comp.spell,     -- spelling
 
-                ca.eslint_d,    -- ts, js
                 ca.gitsigns,    -- git
 
                 fmt.markdownlint, -- markdown
@@ -22,9 +21,6 @@ return {
                 fmt.isort,      -- python
 
                 diag.checkmake, -- makefile
-                diag.eslint_d,  -- ts, js
-                diag.flake8,    -- python
-                diag.jsonlint,  -- json
                 diag.markdownlint, -- markdown
             },
         })

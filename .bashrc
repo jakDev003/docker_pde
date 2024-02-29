@@ -120,8 +120,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Install starship if not already installed
-if [ ! -d "/usr/local/bin/starship" ]; then
-    sh /home/dev/workspace/starshipInstall.sh
-fi
 eval "$(starship init bash)"

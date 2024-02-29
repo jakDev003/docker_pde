@@ -19,20 +19,12 @@ return {
                 fmt.prettier,   -- html, css, ts, js
                 fmt.stylua,     -- lua
                 fmt.black,      -- python
-                fmt.cmake_format, -- cmake
-                --fmt.codespell, -- spelling
-                fmt.fixjson,    -- json,
-                fmt.google_java_format, -- java
                 fmt.isort,      -- python
 
                 diag.checkmake, -- makefile
-                --diag.checkstyle, -- java
-                --diag.codespell, -- spelling
-                diag.dotenv_linter, --.env file's
                 diag.eslint_d,  -- ts, js
                 diag.flake8,    -- python
                 diag.jsonlint,  -- json
-                --diag.luacheck, -- lua
                 diag.markdownlint, -- markdown
             },
         })

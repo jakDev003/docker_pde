@@ -20,30 +20,16 @@ return {
         opts = {
             auto_install = true,
             ensure_installed = {
-                "angularls",
-                "bashls",
-                --"cmake",
                 "cssls",
-                "cucumber_language_server",
                 "diagnosticls",
-                "docker_compose_language_service",
-                "dockerls",
                 "eslint",
                 "html",
-                "jdtls",
                 "jsonls",
                 "lua_ls",
-                --"autotools_language_server",
-                "marksman",
-                "powershell_es",
                 "pyright",
-                "stylelint_lsp",
                 "tsserver",
             }
         },
-    },
-    {
-        "mfussenegger/nvim-jdtls",
     },
     {
         "neovim/nvim-lspconfig",
@@ -53,17 +39,12 @@ return {
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
             local lspconfig = require("lspconfig")
-            lspconfig.angularls.setup({ capabilities = capabilities })
-            lspconfig.bashls.setup({ capabilities = capabilities })
-            lspconfig.cmake.setup({ capabilities = capabilities })
             lspconfig.cssls.setup({ capabilities = capabilities })
-            lspconfig.cucumber_language_server.setup({ capabilities = capabilities })
-            lspconfig.dockerls.setup({ capabilities = capabilities })
+            lspconfig.diagnosticls.setup({ capabilities = capabilities })
             lspconfig.eslint.setup({ capabilities = capabilities })
             lspconfig.html.setup({
                 capabilities = capabilities
             })
-            lspconfig.jdtls.setup({ capabilities = capabilities })
             lspconfig.jsonls.setup({ capabilities = capabilities })
             lspconfig.lua_ls.setup({
                 settings = {
@@ -92,11 +73,7 @@ return {
                 },
                 capabilities = capabilities
             })
-            --lspconfig.autotools_language_server.setup({ capabilities = capabilities })
-            lspconfig.marksman.setup({ capabilities = capabilities })
-            lspconfig.powershell_es.setup({ capabilities = capabilities })
             lspconfig.pyright.setup({ capabilities = capabilities })
-            lspconfig.stylelint_lsp.setup({ capabilities = capabilities })
             lspconfig.tsserver.setup({
                 capabilities = capabilities
             })

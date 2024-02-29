@@ -21,7 +21,6 @@ return {
             auto_install = true,
             ensure_installed = {
                 "cssls",
-                "diagnosticls",
                 "eslint",
                 "html",
                 "jsonls",
@@ -40,7 +39,6 @@ return {
 
             local lspconfig = require("lspconfig")
             lspconfig.cssls.setup({ capabilities = capabilities })
-            lspconfig.diagnosticls.setup({ capabilities = capabilities })
             lspconfig.eslint.setup({ capabilities = capabilities })
             lspconfig.html.setup({
                 capabilities = capabilities

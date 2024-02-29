@@ -29,6 +29,8 @@ RUN wget -O lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/do
 RUN tar xf lazygit.tar.gz lazygit
 RUN install lazygit /usr/local/bin
 
+# Install NPM Packages
+RUN npm i -g prettier eslint
 
 # Create workspace directory
 RUN mkdir -p /root/workspace

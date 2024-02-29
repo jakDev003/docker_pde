@@ -1,0 +1,24 @@
+#################################################################
+# Description: 
+# Nvim configuration in Docker!
+#################################################################
+# To use: docker exec -it nvim-docker sh
+#################################################################
+                                                                                              
+version: '3.7'
+services:
+  nvim-docker:
+    container_name: nvim-docker
+    build:
+      context: .
+      dockerfile: Dockerfile.nvim
+    volumes:
+      - ./workspace:/home/dev/workspace
+      - ./config:/root/.config/nvim
+      - ./.bashrc:/root/.bashrc
+volumes: 
+  # Mount an external volume managed by another Docker Container
+  # https://docs.docker.com/compose/compose-file/07-volumes/#external
+  codev.vol:
+      external: true
+
